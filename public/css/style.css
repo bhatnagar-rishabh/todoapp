@@ -3,6 +3,9 @@ body {
 }
 
 #root {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .note-input {
@@ -31,6 +34,7 @@ body {
 
 .note-input input[type=text] {
     height: 3.125rem;
+
     color: #80868b;
     background-color: #202124;
     font-weight: bold;
@@ -38,9 +42,10 @@ body {
 
     width: 100%;
     border: none;
+    outline: none 0
 }
 
-.note-input textarea {
+textarea {
     color: #80868b;
     background-color: #202124;
     font-weight: bold;
@@ -49,20 +54,20 @@ body {
     width: 100%;
     border: none;
     overflow: hidden;
+    resize: none;
 }
 
-.note-input input[type=text]:focus, .note-input textarea:focus {
+.note-input input[type=text]:focus, textarea:focus {
     border: none;
     outline: none 0;
 }
 
-.note-input textarea {
-    resize: none;
+input[type=checkbox] {
+    filter: invert(1);
 }
 
 .note-input input[type="checkbox"] {
     transform: scale(1.78);
-    filter: invert(1);
     pointer-events: none;
 }
 
@@ -81,4 +86,48 @@ body {
 .ni-body {
     display: flex;
     flex-direction: row;
+}
+
+.todo-item-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.todo-item-block {
+    width: 15rem;
+
+    border-style: solid;
+    border-color: #5f6368;
+    border-width: 1px;
+    border-radius: 0.625rem;
+
+    padding: 0.833rem;
+    margin: 0.625rem;
+}
+
+.todo-item-title {
+    color: #e8eaed;
+    font-weight: bold;
+}
+
+.todo-item-body-list, .todo-item-body-text {
+    padding-top: 1rem;
+}
+
+.todo-item {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0.625rem;
+}
+
+.todo-item > label {
+    color: #e8eaed;
+    padding-left: 0.625rem;
+}
+
+.divider {
+    color: #5555
 }
