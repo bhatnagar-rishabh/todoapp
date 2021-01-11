@@ -1,1 +1,84 @@
-/*write css here*/
+body {
+    background-color: #202124;
+}
+
+#root {
+}
+
+.note-input {
+    background-color: #202124;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 3);
+
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
+
+    border-style: solid;
+    border-color: #5f6368;
+    border-width: 1px;
+    border-radius: 0.625rem;
+}
+
+.note-input:hover {
+    cursor: text;
+}
+
+.note-input input[type=text] {
+    height: 3.125rem;
+    color: #80868b;
+    background-color: #202124;
+    font-weight: bold;
+    font-size: 1rem;
+
+    width: 100%;
+    border: none;
+}
+
+.note-input textarea {
+    color: #80868b;
+    background-color: #202124;
+    font-weight: bold;
+    font-size: 1rem;
+
+    width: 100%;
+    border: none;
+    overflow: hidden;
+}
+
+.note-input input[type=text]:focus, .note-input textarea:focus {
+    border: none;
+    outline: none 0;
+}
+
+.note-input textarea {
+    resize: none;
+}
+
+.note-input input[type="checkbox"] {
+    transform: scale(1.78);
+    filter: invert(1);
+    pointer-events: none;
+}
+
+.note-input .checkbox-div {
+    display: block;
+    padding: 1rem;
+}
+
+.note-input .checkbox-div:hover {
+    border-radius: 3rem;
+    background-color: #313236;
+    cursor: pointer;
+}
+
+
+.ni-body {
+    display: flex;
+    flex-direction: row;
+}
